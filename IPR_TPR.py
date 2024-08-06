@@ -11,16 +11,15 @@ st.markdown(
     '# Calcule E Plote Seu IPR x TPR .'
 )
 
-if st.session_state.show_info:
-    with st.expander("Informações Adicionais"):
-        st.write("""
-        *Este web app foim desenvolvido usando apenas python , pelo estudante de engenaria de petróleo Nuno Henrique Albuquerque Pires,
-        da Universidade Federal de Alagoas*
-        """)
-        st.markdown('- Esse web app foi feito para testar os dados de IPR e TPR , gerando um plote de gráfico .')
-        st.markdown('- Esse web app foi desenvolvido com base nas equações do livro Petroleum Production Engineering Second Edition .')
-        st.markdown('- Referência : Guo, Boyun, Xinghui Liu, e Xuehao Tan. Petroleum Production Engineering. 2ª ed., Gulf Professional Publishing, 2017.')
-        
+with st.expander("Informações Adicionais"):
+    st.write("""
+    *Este web app foim desenvolvido usando apenas python , pelo estudante de engenaria de petróleo Nuno Henrique Albuquerque Pires,
+    da Universidade Federal de Alagoas*
+    """)
+    st.markdown('- Esse web app foi feito para testar os dados de IPR e TPR , gerando um plote de gráfico .')
+    st.markdown('- Esse web app foi desenvolvido com base nas equações do livro Petroleum Production Engineering Second Edition .')
+    st.markdown('- Referência : Guo, Boyun, Xinghui Liu, e Xuehao Tan. Petroleum Production Engineering. 2ª ed., Gulf Professional Publishing, 2017.')
+    
 
 st.divider()
 modelo = st.selectbox("## Qual modelo para curvas de IPR gostaria de usar ?",

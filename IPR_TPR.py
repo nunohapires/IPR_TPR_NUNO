@@ -179,7 +179,7 @@ elif modelo == "Quadrático mássico":
     Pe,Qo,Pwf,Rao = pegar_valores()
     dl = calcular_tpr(Qo,Rao)
     #pegar valores que faltam 
-    Psat = col1.number_input('Qual é a pressão de saturação (Psi)?')
+    Psat = col1.number_input("Qual é a pressão de saturação (Psi)?")
     Do = col1.number_input('Qual é densidade do oleo (kg/m³) ?')
     Dl = col1.number_input('Qual é densidade do liguido (kg/m³)?')
     Dg = col1.number_input('Qual é densidade do gás (kg/m³)?')

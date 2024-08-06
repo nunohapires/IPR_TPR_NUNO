@@ -29,9 +29,9 @@ col1 , col2 = st.columns(2)
 
 def pegar_valores():
     col1.info('### *De acordo com o seu teste de formação:*', icon="📉")          
-    Pe = col1.number_input('Qual a pressão estatica ?')
-    Pwf = col1.number_input('Qual a Pressão do teste 1 ?')
-    Qo = col1.number_input('Qual a vazão do teste 1 ?')
+    Pe = col1.number_input('Qual a pressão estatica ? (Psi)')
+    Pwf = col1.number_input('Qual a Pressão do teste 1 ? (Psi)')
+    Qo = col1.number_input('Qual a vazão do teste 1 ? (Stb/day)')
     RAO_test = col1.selectbox("Existe Razão Agua e Oleo ?", ("Não", "Sim"))
     if RAO_test == "Não": 
         Rao = 0
@@ -94,14 +94,14 @@ def calcular_tpr(Qo,Rao):
             st.info('### *De acordo com os dados do seu poço :*', icon="📈")
             st.write('### Considerando apenas o produção')
 
-            L = st.number_input('Qual é o comprimento do tubo :')
-            D = st.number_input('Qual é o diametro do primeiro tubo :')
+            L = st.number_input('Qual é o comprimento do tubo (m):')
+            D = st.number_input('Qual é o diametro do primeiro tubo (in):')
             N_tubos = st.number_input('Qual é o numero de tubo :')
-            Do = st.number_input('Qual é a densidade do óleo :')
-            Dw =  st.number_input('Qual é a densidade da água :')
-            Dg = st.number_input('Qual é a densidade do gás :')
+            Do = st.number_input('Qual é a densidade do óleo (kg/m³):')
+            Dw =  st.number_input('Qual é a densidade da água (kg/m³):')
+            Dg = st.number_input('Qual é a densidade do gás (kg/m³):')
             Rgo = st.number_input('Qual é RGO :')
-            Pwh = st.number_input('Qual é a pressão na cabeça do poço :')
+            Pwh = st.number_input('Qual é a pressão na cabeça do poço (Psi):')
 
             Yo = Do/Dw
             Yw = Dw/1000
@@ -134,7 +134,7 @@ elif modelo == 'Vogel ':
     Pe,Qo,Pwf,Rao = pegar_valores()
     dl = calcular_tpr(Qo,Rao)
     #pegar valores que faltam 
-    Psat = col1.number_input('Qual é a pressão de saturação ?')
+    Psat = col1.number_input('Qual é a pressão de saturação (Psi)?')
     if st.button('Confirme os dados :'):
         df = calcular_vogel(Pe,Qo,Pwf,Rao,Psat)
         df['TPR'] = dl['TPR']
@@ -147,7 +147,7 @@ elif modelo == 'Vogel ':
 elif modelo == 'Patton e Goland':
     Pe,Qo,Pwf,Rao = pegar_valores()
     #pegar valores que faltam 
-    Psat = col1.number_input('Qual é a pressão de saturação ?')
+    Psat = col1.number_input('Qual é a pressão de saturação (Psi)?')
     dl = calcular_tpr(Qo,Rao)
     if st.button('Confirme os dados :'):
         df = calcular_Patton_Goland(Pe,Qo,Pwf,Rao,Psat)
@@ -162,9 +162,9 @@ elif modelo == 'Fetkovich':
     Pe,Qo,Pwf,Rao = pegar_valores()
     dl = calcular_tpr(Qo,Rao)
     #pegar valores que faltam 
-    Psat = col1.number_input('Qual é a pressão de saturação ?')
-    Pwf2 = col1.number_input('Qual é a pressão do teste 2 ?')
-    Qo2 = col1.number_input('Qual é a vazão do teste 2 ?')
+    Psat = col1.number_input('Qual é a pressão de saturação (Psi)?')
+    Pwf2 = col1.number_input('Qual é a pressão do teste 2 (Psi)?')
+    Qo2 = col1.number_input('Qual é a vazão do teste 2 (Stb/day)?')
     
     if st.button('Confirme os dados :'):
         df = calcular_fetkovich(Pe,Qo,Pwf,Rao,Psat,Pwf2,Qo2)
@@ -179,10 +179,10 @@ elif modelo == "Quadrático mássico":
     Pe,Qo,Pwf,Rao = pegar_valores()
     dl = calcular_tpr(Qo,Rao)
     #pegar valores que faltam 
-    Psat = col1.number_input('Qual é a pressão de saturação ?')
-    Do = col1.number_input('Qual é densidade do oleo ?')
-    Dl = col1.number_input('Qual é densidade do liguido ?')
-    Dg = col1.number_input('Qual é densidade do gás ?')
+    Psat = col1.number_input('Qual é a pressão de saturação (Psi)?')
+    Do = col1.number_input('Qual é densidade do oleo (kg/m³) ?')
+    Dl = col1.number_input('Qual é densidade do liguido (kg/m³)?')
+    Dg = col1.number_input('Qual é densidade do gás (kg/m³)?')
     Rgo = col1.number_input('Qual é RGO ?')
     
     if st.button('Confirme os dados :'):

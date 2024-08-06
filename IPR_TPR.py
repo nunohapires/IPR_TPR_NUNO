@@ -13,7 +13,7 @@ st.markdown(
 
 with st.expander("Informações Adicionais"):
     st.write("""
-    *Este web app foim desenvolvido usando apenas python , pelo estudante de engenharia de petróleo Nuno Henrique Albuquerque Pires,
+    *Este web app foi desenvolvido usando apenas python , pelo estudante de engenharia de petróleo Nuno Henrique Albuquerque Pires,
     da Universidade Federal de Alagoas.*
     """)
     st.markdown('- Esse web app foi feito para testar dados de IPR e TPR , gerando um plote gráfico .')

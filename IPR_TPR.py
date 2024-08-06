@@ -1,7 +1,5 @@
 import pandas as pd 
 import streamlit as st
-import seaborn as sns 
-import plotly.express as px
 import numpy as np
 
 st.set_page_config(

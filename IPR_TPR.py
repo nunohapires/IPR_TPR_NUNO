@@ -37,7 +37,7 @@ def pegar_valores():
         Rao = 0
     else:
         col1.write('Informe no seguinte formato : 20% = 0.2')
-        Rao = st.number_input('Qual a RAO ?')
+        Rao = col1.number_input('Qual a RAO ?')
     return Pe,Qo,Pwf,Rao
 
 def calcular_linear(Pe,Qo,Pwf,Rao):

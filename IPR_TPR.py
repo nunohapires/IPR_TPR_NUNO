@@ -36,7 +36,7 @@ def pegar_valores():
     if RAO_test == "Não": 
         Rao = 0
     else:
-        st.write('Informe no seguinte formato : 20% = 0.2')
+        col1.write('Informe no seguinte formato : 20% = 0.2')
         Rao = st.number_input('Qual a RAO ?')
     return Pe,Qo,Pwf,Rao
 

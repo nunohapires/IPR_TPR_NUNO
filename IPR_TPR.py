@@ -131,10 +131,9 @@ if modelo == 'Linear':
         st.data_editor(df)
 
 elif modelo == 'Vogel ':
+    Psat = col1.number_input('Qual é a pressão de saturação (Psi)?')
     Pe,Qo,Pwf,Rao = pegar_valores()
     dl = calcular_tpr(Qo,Rao)
-    #pegar valores que faltam 
-    Psat = col1.number_input('Qual é a pressão de saturação (Psi)?')
     if st.button('Confirme os dados :'):
         df = calcular_vogel(Pe,Qo,Pwf,Rao,Psat)
         df['TPR'] = dl['TPR']

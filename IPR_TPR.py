@@ -92,7 +92,7 @@ def calcular_Quadrático_mássico (Pe,Qo,Pwf,Rao,Do,Dl,Dg,Rgo):
 def calcular_tpr(Qo,Rao):
         with col2 :
             st.info('### *De acordo com os dados do seu poço :*', icon="📈")
-            st.write('### Considerando apenas o produção')
+            st.write('### Considerando apenas o trecho de produção')
 
             L = st.number_input('Qual é o comprimento do tubo (m):')
             D = st.number_input('Qual é o diametro do primeiro tubo (in):')

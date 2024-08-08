@@ -97,9 +97,9 @@ def calcular_tpr(Qo,Rao):
             L = st.number_input('Qual é o comprimento do tubo (m):')
             D = st.number_input('Qual é o diametro do primeiro tubo (in):')
             N_tubos = st.number_input('Qual é o numero de tubo :')
-            Do = st.number_input('Qual é a densidade do óleo (kg/m³):')
-            Dw =  st.number_input('Qual é a densidade da água (kg/m³):')
-            Dg = st.number_input('Qual é a densidade do gás (kg/m³):')
+            Do = st.number_input('Qual é a densidade do óleo (g/m³):')
+            Dw =  st.number_input('Qual é a densidade da água (g/m³):')
+            Dg = st.number_input('Qual é a densidade do gás (g/m³):')
             Rgo = st.number_input('Qual é RGO :')
             Pwh = st.number_input('Qual é a pressão na cabeça do poço em psi :')
 
